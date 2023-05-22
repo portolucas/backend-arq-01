@@ -1,0 +1,3 @@
+Service-oriented architecture (SOA) example
+
+Neste exemplo, temos três serviços independentes (ProdutoService, CarrinhoService e PedidoService) que encapsulam a lógica de negócio relacionada a produtos, carrinhos e pedidos, respectivamente. O controlador (PedidoController) é responsável por coordenar as chamadas aos serviços para realizar as operações desejadas, como adicionar um produto ao carrinho e finalizar um pedido.

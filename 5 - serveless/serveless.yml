@@ -1,0 +1,19 @@
+# Para implantar essa função no AWS Lambda usando o Serverless Framework, 
+# você precisaria de um arquivo serverless.yml para configurar o serviço. 
+# Aqui está um exemplo básico:
+
+service: my-service
+provider:
+  name: aws
+  runtime: nodejs14.x
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: post
+
+#No exemplo acima, definimos o nome do serviço como "my-service" e especificamos que estamos usando a AWS como provedor e o Node.js 14.x como a versão do tempo de execução.
+#Em seguida, definimos a função hello e configuramos o evento HTTP para o caminho /hello e o método POST. O handler especifica o arquivo e a função que devem ser executados.
+
