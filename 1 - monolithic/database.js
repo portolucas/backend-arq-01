@@ -1,5 +1,3 @@
-// database.js
-
 // Dados simulados em memória
 let users = [
   { id: 1, name: "João", email: "joao@example.com" },

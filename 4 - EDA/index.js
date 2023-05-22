@@ -1,6 +1,6 @@
 // Importar as bibliotecas necessárias
-const express = require("express");
-const EventEmitter = require("events");
+import express from "express";
+import EventEmitter from "events";
 
 // Inicializar o aplicativo Express
 const app = express();

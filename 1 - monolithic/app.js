@@ -1,15 +1,13 @@
-// app.js
-
 // Importar os módulos necessários
-const express = require("express");
-const bodyParser = require("body-parser");
-const database = require("./database");
+import express from "express";
+import { json } from "body-parser";
+import { getUsers, createUser } from "./database";
 
 // Criar a instância do aplicativo Express
 const app = express();
 
 // Configurar o middleware para análise de corpo da solicitação
-app.use(bodyParser.json());
+app.use(json());
 
 // Definir uma rota para a página inicial
 app.get("/", (req, res) => {
@@ -18,14 +16,14 @@ app.get("/", (req, res) => {
 
 // Definir uma rota para obter todos os usuários
 app.get("/users", (req, res) => {
-  const users = database.getUsers();
+  const users = getUsers();
   res.json(users);
 });
 
 // Definir uma rota para criar um novo usuário
 app.post("/users", (req, res) => {
   const { name, email } = req.body;
-  const user = database.createUser(name, email);
+  const user = createUser(name, email);
   res.json(user);
 });
 
